@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color: #eebe28;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.navbar-links ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-links li {
+    list-style: none;
+    padding: 0 30px;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li a:hover {
+    color: #eebe28;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    color: red;
+}
+
+.socials i {
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+.socials i:hover {
+    color: yellow;
+}
+
+#intro {
+    background: url(images/group1.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+#intro-logo {
+    opacity: 20%;
+    width: 100%;
+    max-width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.about {
+    background-color: black;
+    color: #ffffffa6;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.about div {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.about-image {
+    width: 70%;
+}
+
+.timetable {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+#timetable-image {
+    width: 400px;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px;
+}
