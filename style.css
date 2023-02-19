@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,26 +10,50 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: #9fa4a8;
+    font-size: 18px;
+}
+
+section {
+    padding: 20px 0;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+
 }
 
 .navbar {
     color: #eebe28;
     width: 100%;
-    height: 15vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: black;
     font-size: 20px;
     z-index: 1000;
+    flex-wrap: nowrap;
 }
 
 #logo {
+    display: flex;
+    justify-content: left;
     width: 200px;
     height: auto;
-    padding: 0;
+    padding: 10px;
+    padding-right: 30px;
     margin: 0;
     
+}
+
+.navbar-links {
+    flex-grow: 2;
+    padding: 0 20px;
 }
 
 .navbar-links ul {
@@ -37,14 +63,11 @@ body {
 
 .navbar-links li {
     list-style: none;
-    padding: 0 30px;
 }
 
 .navbar-links li a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
-    display: block;
 }
 
 .navbar-links li a:hover {
@@ -62,8 +85,12 @@ body {
     color: red;
 }
 
+.socials {
+    padding-left: 20px;
+}
 .socials i {
-    padding: 0 20px;
+    flex-grow: 1;
+    padding: 0 10px;
     font-size: 30px;
 }
 
@@ -73,20 +100,16 @@ body {
 
 #intro {
     background: url(images/group1.jpg);
-    height: 90vh;
+    width: 1200px;
     background-size: cover;
     background-position: center;
-    position: relative;
+    margin: 0 auto;
     
 }
 
 #intro-logo {
     opacity: 20%;
-    width: 100%;
-    max-width: 100%;
-    height: 90vh;
-    position: relative;
-    overflow: hidden;
+    width: 1200px;
 }
 
 .about {
@@ -97,37 +120,185 @@ body {
     height: 100vh;
 }
 
+.about h2 {
+    padding-bottom: 20px;
+}
+
 .about div {
+    display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
 .about-image {
-    width: 70%;
+    max-width: 60%;
 }
 
 .timetable {
-    max-width: 100%;
-    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    background-color: white;
-    align-items: center;
-    justify-content: space-evenly;
+}
+.timetable-image {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
     
 }
 
-#timetable-image {
-    width: 400px;
+.timetable-image:nth-child(2) img {
+    width: 200%;
+}
+
+.timetable-image:nth-child(2)  {
+    flex-direction: column;
+    flex-grow: 2;
+    object-fit: contain;
+}
+
+.timetable-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.faq-background {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    /* background-color: #d8e1e8; */
 }
 
 .faq-container {
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
+    width: 50%;
+}
+
+#faq-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .faq {
+    color: #9fa4a8;
     background-color: transparent;
     border: 1px;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+
+}
+
+.faq.active::before, .faq.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #eebe28;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before {
+    color: #d60c21;
+    top: -10px;
+    left: -30px;
+    transform: rotateY('180deg');
+}
+
+.faq-title {
+    margin: 0 35px 0 0;
+}
+
+.faq .fas {
+    color: #9fa4a8;
+}
+
+.faq-text {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0; 
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.faq-toggle:focus {
+    outline: 0;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+    color: black;
+}
+
+.faq.active .faq-toggle .fa-hand-back-point-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #9fa4a8;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+
+.contact-details h2 {
+    margin-bottom: 10rem;
+}
+
+.contact-details p {
+    margin-bottom: 1rem;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map {
+    padding: 0 50px;
+    align-items: center;
 }
