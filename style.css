@@ -439,6 +439,10 @@ h3.faq-title {
         padding: 10px;
     }
 
+    .about {
+        height: fit-content;
+    }
+
     .about p {
         display: inline-block;
     }
