@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="nav">
         <img src="images/logo-black.jpg" id="logo"></img>
-        <div class="navbar-links">
+        <div class="navbar-links" id="navbar-links">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Meet The Family</a></li>
@@ -26,16 +26,20 @@
             <i class="fa fa-instagram" aria-hidden="true"> </i>
             <i class="fa fa-phone" aria-hidden="true"></i>
         </div>
-        <a href="#" class="toggle-button">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </a>
+        <button class="icon" id="toggle-button">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+        </button>
     </nav>
 
-    <section>
-        <div id="intro">
-            <img id="intro-logo" src="images/logo-white.jpg" alt="">
+    <section class="home">
+        <img src="images/group1.jpg">
+        <div class="text-block">
+            <h2><span>North</span><span>South</span><span> JIU JITSU</span></h2>
+            <p>Come see us for a free trial!</p>
         </div>
     </section>
+
 
     <section class="about">
         <div>
@@ -47,26 +51,25 @@
                 minimal start up costs and does not require a specific uniform, shorts and a shirt are absolutely fine
                 for beginners.
                 We have a range of members from active professional competitors, to day one beginners. We offer a safe
-                and fun environment for all to learn in ! If you’re interested you’ll find us at 25 gatherer street,
-                Phillipstown, Christchurch.</p>
+                and fun environment for all to learn in ! If you’re interested you’ll find us at 4, Christchurch.</p>
         </div>
         <div class="about-image">
             <img src="images/group2.jpg" alt="">
         </div>
     </section>
 
-    <div class="timetable">
-        <div class="timetable-image">
+    <section class="timetable">
+        <div class="timetable-image hide">
             <img src="images/northsouth1.jpg" alt="">
         </div>
         <div class="timetable-image">
             <h2>TIMETABLE</h2>
             <img src="images/timetable.jpg" alt="">
         </div>
-        <div class="timetable-image">
+        <div class="timetable-image hide">
             <img src="images/northsouth2.jpg" alt="">
         </div>
-    </div>
+    </section>
 
     <section class="faq-background">
         <div class="faq-container">
@@ -138,12 +141,14 @@
     </section>
 
     <section class="contact">
-        <div class="contact-details">
+        <div class="contacts">
             <h2>Contact</h2>
-            <p>Phone: 02108333073</p>
-            <p>Email:</p>
-            <p>Facebook: <i class="fa-brands fa-facebook"></i></p>
-            <p>Instagram: <i class="fa-brands fa-instagram"></i></p>
+            <div class="contact-details">
+                <a href="#">Phone: 02108333073</a>
+                <a href="#">Email: northsouth@email.com</a>
+                <a href="#"><i id="facebook" class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#"><i id="insta" class="fa-brands fa-instagram"></i> Instagram</a>
+            </div>
 
         </div>
         <div class="location">
