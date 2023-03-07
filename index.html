@@ -10,34 +10,55 @@
 </head>
 
 <body>
-    <nav class="navbar" id="nav">
-        <img src="images/logo-black.jpg" id="logo"></img>
-        <div class="navbar-links" id="navbar-links">
-            <ul>
-                <li><a href="#nav" style="--i:1">Home</a></li>
-                <li><a href="#about" style="--i:2">Meet The Family</a></li>
-                <li><a href="#timetable" style="--i:3">Timetable</a></li>
-                <li><a href="#faq" style="--i:4">Questions</a></li>
-                <li><a href="#contact" style="--i:5">Contact</a></li>
-            </ul>
-        </div>
-        <div class="socials">
-            <i class="fa fa-facebook-official" aria-hidden="true"> </i>
-            <i class="fa fa-instagram" aria-hidden="true"> </i>
-            <i class="fa fa-phone" aria-hidden="true"></i>
-        </div>
-        <button class="icon" id="toggle-button">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-        </button>
-    </nav>
+
 
     <section class="home">
-        <img src="images/group1.jpg">
+        <nav class="navbar" id="nav">
+            <img src="images/logo-noback.png" id="logo"></img>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="#nav" style="--i:1">Home</a></li>
+                    <li><a href="#about" style="--i:2">Meet The Family</a></li>
+                    <li><a href="#timetable" style="--i:3">Timetable</a></li>
+                    <li><a href="#faq" style="--i:4">Questions</a></li>
+                    <li><a href="#contact" style="--i:5">Contact</a></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=100086590868415"><i class="fa fa-facebook-official"
+                        aria-hidden="true"> </i></a>
+                <a href="https://www.instagram.com/north.southjj/"><i class="fa fa-instagram" aria-hidden="true">
+                    </i></a>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            </div>
+            <button class="icon" id="toggle-button">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+            </button>
+        </nav>
+        <video poster="images/ns1.jpg" id="video" autoplay muted loop>
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+
+        <div class="slider">
+            <div class="slide current"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+
+        <div class="buttons">
+            <button id="prev"><i class="fas fa-arrow-left"></i></button>
+            <button id="next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+
         <div class="text-block">
-            <h2><span>North</span><span>South</span><span>JIU JITSU</span></h2>
+            <h1><span>North</span><span>South</span><span>JIU JITSU</span></h1>
             <p>Come see us for a free trial!</p>
         </div>
+
     </section>
 
     <section class="about hidden" id="about">
@@ -150,8 +171,10 @@
             <div class="contact-details">
                 <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 02108333073</a>
                 <a href="#"><i class="fa-solid fa-envelope"></i> northsouth@email.com</a>
-                <a href="#"><i id="facebook" class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="#"><i id="insta" class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100086590868415"><i id="facebook"
+                        class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/north.southjj/"><i id="insta" class="fa-brands fa-instagram"></i>
+                    Instagram</a>
             </div>
 
         </div>

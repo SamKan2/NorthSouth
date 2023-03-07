@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    
 }
 
 a {
@@ -14,6 +14,7 @@ a {
 body {
     background-color: black;
     color: #9fa4a8;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 
@@ -21,11 +22,20 @@ section {
     padding: 30px 0;
 }
 
+h1 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 8vw;
+    color: white;
+    text-transform: uppercase;
+}
+
 h2 {
     text-align: center;
     font-size: 3rem;
     color: white;
     text-transform: uppercase;
+    font-family: 'Aclonica', sans-serif;
+    padding: 20px;
 }
 
 p {
@@ -33,29 +43,28 @@ p {
 }
 
 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 1s;
 }
 
 .navbar {
-    color: #eebe28;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    font-size: 1.5rem;
+    background-color: rgba(0,0,0,0.5);
+    font-size: min(24px, 2vw);
     flex-wrap: nowrap;
     transition: height 0.6s linear;
+    position: absolute;
+    top: 0;
 }
 
 #logo {
     display: flex;
-    width: 200px;
+    width: 20vw;
+    max-width: 250px;
     height: auto;
-    padding: 10px;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
 }
 
 .navbar-links {
@@ -65,7 +74,7 @@ img:hover {
 
 .navbar-links ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar-links li {
@@ -103,7 +112,7 @@ img:hover {
 }
 
 .icon .line {
-    background-color: white;
+    background-color: #d60c21;
     height: 3px;
     width: 30px;
     position: absolute;
@@ -133,11 +142,69 @@ nav.active .icon .line2 {
 .socials i {
     flex-grow: 1;
     padding: 0 10px;
-    font-size: 30px;
+    font-size: 2vw;
+    color: #eebe28;
 }
 
 .socials i:hover {
-    color: yellow;
+    color: #eebe28;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button {
+    border: 2px solid #eebe28;
+    background-color: transparent;
+    color: #eebe28;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+    z-index: 1;
+}
+
+.buttons button:hover {
+    background-color: #eebe28;
+    color: #333;
+}
+
+.home video {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
 }
 
 .home {
@@ -146,32 +213,28 @@ nav.active .icon .line2 {
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    padding-top: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .home p {
     color: #eebe28;
-    font-size: 18px;
+    font-size: 2vw;
+    font-weight: 700;
 }
 
-.home img {
-    max-width: 100%;
-    max-height: 70vh;
-    object-fit: cover;
-}
-
-.home h2 {
+.home h1 {
     letter-spacing: 3px;
 }
 
-.home h2 span:nth-of-type(1) {
+.home h1 span:nth-of-type(1) {
     display: inline-block;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: 0.7s;
 }
 
-.home h2 span:nth-of-type(2) {
+.home h1 span:nth-of-type(2) {
     display: inline-block;
     padding-right: 1rem;
     opacity: 0;
@@ -179,7 +242,7 @@ nav.active .icon .line2 {
     animation-delay: 0.8s;
 }
 
-.home h2 span:nth-of-type(3) {
+.home h1 span:nth-of-type(3) {
     display: inline-block;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -187,8 +250,11 @@ nav.active .icon .line2 {
 }
 
 .text-block {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    text-align: center;
 }
 
 .about {
@@ -222,6 +288,7 @@ nav.active .icon .line2 {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
+    background-color: black;
 }
 .timetable-image {
     display: flex;
@@ -417,6 +484,8 @@ h3.faq-title {
     .navbar {
         justify-content: space-between;
         flex-direction: column;
+        background: transparent;
+        font-size: 8vw;
     }
     .navbar-links ul {
         width: 100%;
@@ -433,9 +502,26 @@ h3.faq-title {
 
     .icon {
         display: block;
+        background-color: transparent;
     }
-    .home h2{
+
+    .home {
+        height: 100vh;
+        padding: 0;
+    }
+    .home h1{
         letter-spacing: normal;
+    }
+
+
+    #video {
+        display: inline;
+
+    }
+
+    .text-block {
+        margin-top: auto;
+        background-color: transparent;
     }
     
     .text-block span:last-of-type{
@@ -454,10 +540,6 @@ h3.faq-title {
         display: inline-block;
     }
 
-    .about-image img{
-        display: none;
-    }
-
     .mobile-img {
         display: flex;
         max-width: 100%;
@@ -467,9 +549,10 @@ h3.faq-title {
         padding: 0;
     }
     
-    .socials, .navbar-links, img#faq-image, .location h2, .timetable-image.hide {
+    .socials, .navbar-links, img#faq-image, .location h2, .timetable-image.hide, .slider, .home .buttons, #logo, .about-image img{
         display: none;
     }
+
     #intro {
         max-width: 100%;
     }
@@ -568,4 +651,36 @@ h3.faq-title {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.slide:first-child {
+    background: url('images/northsouth1.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url('images/group2-bw.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(3) {
+    background: url('images/group3.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(4) {
+    background: url('images/group1-bw.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(5) {
+    background: url('images/northsouth2.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(6) {
+    background: url('images/ns1-bw.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(6) {
+    background: url('images/gym.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(6) {
+    background: url('images/gym2-bw.jpg') no-repeat center center/cover;
 }
